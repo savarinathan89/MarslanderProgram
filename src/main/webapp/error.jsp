@@ -27,7 +27,7 @@
 </div>
 
 <div id="login">
-<a title="LoginPage" href="avnlogin.jsp">Login again!</a>
+<a title="LoginPage" href="avnlogin.jsp">Please Login again!</a>
 </div><br>
 </body>
 </html>
