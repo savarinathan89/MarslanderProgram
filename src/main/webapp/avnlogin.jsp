@@ -174,7 +174,7 @@ position: absolute;
 </i>
 </b>
 <br><br>
-The Mars Help Desk, can assist with issues and concerns regarding:
+The MarsLander Help Desk, can assist with issues and concerns regarding:
 <br><br>
 <i>
 <font color="orange"> Troubleshooting problems</font>
