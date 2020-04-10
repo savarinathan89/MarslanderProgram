@@ -6,7 +6,7 @@ node {
     def rtMaven = Artifactory.newMavenBuild()
     def buildInfo
     
- rtMaven.tool = "Maven"
+ rtMaven.tool = "maven"
 
     stage('Clone sources') {
         git url: 'https://github.com/savarinathan89/MarslanderProgram.git'
@@ -14,7 +14,10 @@ node {
     stage('SonarQube analysis') {
           withSonarQubeEnv(credentialsId: 'sonartoken', installationName: 'sonarqube') 
 	  { // You can override the credential to be used
-               sh 'mvn sonar:sonar'
+               
+		  withMaven(maven:'maven') {
+                        sh 'mvn clean package sonar:sonar'
+                    }
           }
     }
     stage('Artifactory configuration') {
