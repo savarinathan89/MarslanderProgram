@@ -12,7 +12,7 @@ node {
         git url: 'https://github.com/savarinathan89/MarslanderProgram.git'
     }
     stage('SonarQube analysis') {
-          withSonarQubeEnv(credentialsId: 'sonartoken', installationName: 'sonarqube') 
+          withSonarQubeEnv('sonarqube') 
 	  { // You can override the credential to be used
                
 		  withMaven(maven:'maven') {
