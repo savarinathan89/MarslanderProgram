@@ -16,7 +16,7 @@ node {
 	  { // You can override the credential to be used
                
 		  withMaven(maven:'maven') {
-                        sh 'mvn clean package sonar:sonar'
+                        sh 'mvn -Dsonar.login=admin -Dsonar.password=admin clean package sonar:sonar'
                     }
           }
     }
