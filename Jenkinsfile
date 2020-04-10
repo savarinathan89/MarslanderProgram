@@ -16,7 +16,7 @@ node {
 	  { // You can override the credential to be used
                
 		  withMaven(maven:'maven') {
-                        sh 'mvn sonar:sonar '
+			  sh '${SONAR_MAVEN_GOAL} -Dsonar.host.url=${SONAR_HOST_URL}'
                     }
           }
     }
