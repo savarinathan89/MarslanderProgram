@@ -16,7 +16,7 @@ node {
 	  { // You can override the credential to be used
                
 		  withMaven(maven:'maven') {
-                        sh 'mvn Dsonar.test.exclusions=**/test/java/servlet/createpage_junit.java -Dsonar.login=admin -Dsonar.password=admin -Dsonar.tests=. -Dsonar.inclusions=**/test/java/servlet/createpage_junit.java -Dsonar.sources=. sonar:sonar '
+                        sh 'mvn -Dsonar.login=admin -Dsonar.password=admin sonar:sonar '
                     }
           }
     }
