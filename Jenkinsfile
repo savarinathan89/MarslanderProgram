@@ -14,7 +14,7 @@ node {
     stage('SonarQube analysis') {
           withSonarQubeEnv(credentialsId: 'sonartoken', installationName: 'sonarqube') 
 	  { // You can override the credential to be used
-               sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar'
+               sh 'mvn sonar:sonar'
           }
     }
     stage('Artifactory configuration') {
