@@ -1,7 +1,7 @@
 
 node {
     // Get Artifactory server instance, defined in the Artifactory Plugin administration page.
-    def server = Artifactory.server "artifcatory"
+    def server = Artifactory.server "artifactoryCaseStudy"
     // Create an Artifactory Maven instance.
     def rtMaven = Artifactory.newMavenBuild()
     def buildInfo
@@ -9,7 +9,7 @@ node {
  rtMaven.tool = "Maven"
 
     stage('Clone sources') {
-        git url: 'https://github.com/savarinathan89/webapp.git'
+        git url: 'https://github.com/savarinathan89/MarslanderProgram.git'
     }
 
     stage('Artifactory configuration') {
