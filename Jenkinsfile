@@ -48,7 +48,7 @@ node {
                    sh 'curl -v -u jenkins:jenkins -T /var/lib/jenkins/workspace/MarsLander_Pipeline/target/JavaWebApp-1.0-SNAPSHOT.war "http://18.191.247.103:8080/manager/text/deploy?path=/ProdWebapp&update=true"'
           }
 	stage("Slacknotification") {
-                     slackSend channel: 'devops_case_study_team', color: '#BADA55', message: 'Build Triggered', teamDomain: 'Sab-Devops-Learning', tokenCredentialId: 'slack1'
+                     slackSend channel: 'devops_case_study_team', color: '#BADA55', message: 'MarsLander deployment Completed', teamDomain: 'Sab-Devops-Learning', tokenCredentialId: 'slack1'
     }
      
     }
