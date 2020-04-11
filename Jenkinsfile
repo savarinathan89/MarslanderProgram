@@ -43,7 +43,7 @@ node {
 	
      stage ('functionalTesting'){
 	     
-	     tMaven.run pom: 'functionaltest/pom.xml', goals: 'test'
+	     rtMaven.run pom: 'functionaltest/pom.xml', goals: 'test'
 	     //withMaven(maven:'maven') {
 	     	//sh 'mvn -B -f /var/lib/jenkins/workspace/functional-testing/functionaltest/pom.xml  test'
 	     //}
