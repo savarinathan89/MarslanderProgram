@@ -39,5 +39,14 @@ node {
     stage('Publish build info') {
         server.publishBuildInfo buildInfo
     }
+	
+	
+stage ('DeployToQA') {
+    steps{
+        sshagent(credentials : ['tomcat']) {          
+            sh 'scp **/*.war jenkins@3.134.98.111:/QAWebapp'
+        }
+    }
+}
     }
 	 
