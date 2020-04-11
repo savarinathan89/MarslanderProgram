@@ -9,9 +9,7 @@ node {
  rtMaven.tool = "maven"
 
     stage('Clone sources') {
-	     script {
-                    properties([pipelineTriggers([pollSCM('*/1 * * * *')])] )
-                }
+	     
         git url: 'https://github.com/savarinathan89/MarslanderProgram.git'
     }
     stage('SonarQube analysis') {
