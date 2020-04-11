@@ -36,17 +36,20 @@ node {
         buildInfo = rtMaven.run pom: 'pom.xml', goals: ' clean install'
     }
 
-    stage('Publish build info') {
-        server.publishBuildInfo buildInfo
-    }
-	
-	
+  
     stage ('DeployToQA') {
                    sh 'curl -v -u jenkins:jenkins -T /var/lib/jenkins/workspace/MarsLander_Pipeline/target/JavaWebApp-1.0-SNAPSHOT.war "http://3.134.98.111:8080/manager/text/deploy?path=/QAWebapp&update=true"'
           }
+	
      stage ('functionalTesting'){
-	     sh 'mvn -B -f /var/lib/jenkins/workspace/functional-testing/functionaltest/pom.xml  test'
+	     withMaven(maven:'maven') {
+	     	sh 'mvn -B -f /var/lib/jenkins/workspace/functional-testing/functionaltest/pom.xml  test'
+	     }
 	  }
+	
+	  stage('Publish build info') {
+        server.publishBuildInfo buildInfo
+    }
      
     stage ('DeployToProd') {
                    sh 'curl -v -u jenkins:jenkins -T /var/lib/jenkins/workspace/MarsLander_Pipeline/target/JavaWebApp-1.0-SNAPSHOT.war "http://18.191.247.103:8080/manager/text/deploy?path=/ProdWebapp&update=true"'
