@@ -13,7 +13,7 @@ node {
 
     stage('Clone sources') {
 	     
-        git url: 'https://github.com/savarinathan89/MarslanderProgram.git'
+        git poll:true, url: 'https://github.com/savarinathan89/MarslanderProgram.git'
     }
 	
     stage('SonarQube analysis') {
