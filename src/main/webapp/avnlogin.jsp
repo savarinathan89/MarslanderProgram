@@ -165,7 +165,7 @@ position: absolute;
 </div><br>
 <img src="logopost.jpg" alt="HTML5 Icon" style="width:325px;height:185px;position:absolute;left:60px;top:10px;">
 <b>
-<h1 style="color:#968370;font-size: 350%;position:absolute;left:460px;top:80px;">MARSLANDER COMMUNICATION Case Study</h1></b>
+<h1 style="color:#968370;font-size: 350%;position:absolute;left:460px;top:80px;">MARSLANDER COMMUNICATION Case Study </h1></b>
 <br><br><br>
 <section class="wlp-login-message-content">
 <p><b>
@@ -184,7 +184,7 @@ The MarsLander Help Desk, can assist with issues and concerns regarding:
 -New service, voicemail, caller menus, special calling features and plans, caller ID, music on hold, international dialing.<br>
 -Fax machines and codes, headsets, conference calls, speaker phone rental.<br>
 -Call accounting and billling - Telephone bill login.<br>
--We also manage plans, orders, service, billing and trouble shooting for college provided cellphones and smartphones.<br><br>
+-We also manage plans, orders, service, billing and trouble shooting for college provided cellphones and smartphones. <br><br>
 <i>
 <font color="darkorange"> CONTACT US</font>
 </i>
